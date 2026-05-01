@@ -50,9 +50,17 @@
 "use client";
 import React, { useState } from "react";
 import Footer from "../components/Footer";
+<<<<<<< HEAD
 import "./style.css";
 
 export default function Contact() {
+=======
+import Link from "next/link";
+import "./style.css";
+
+export default function Contact() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+>>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -143,6 +151,36 @@ export default function Contact() {
 
   return (
     <>
+<<<<<<< HEAD
+=======
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-transparent flex justify-between items-center px-8 py-4 z-50">
+        <div className="text-white text-2xl">My Portfolio</div>
+        <div className="hidden md:flex gap-6 text-white">
+          <Link href="/" className="hover:text-yellow-400 text-white">Home</Link>
+          <Link href="/project" className="hover:text-yellow-400 text-white">Projects</Link>
+          <Link href="/about" className="hover:text-yellow-400 text-white">About</Link>
+          <Link href="/contact" className="hover:text-yellow-400 text-white">Contact</Link>
+        </div>
+        <div
+          className="md:hidden flex flex-col justify-around items-center w-8 h-6 cursor-pointer"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className="block h-1 w-full bg-white"></span>
+          <span className="block h-1 w-full bg-white"></span>
+          <span className="block h-1 w-full bg-white"></span>
+        </div>
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-gray-800 flex flex-col items-center py-4 space-y-2 text-white">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400">Home</Link>
+            <Link href="/project" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400">Projects</Link>
+            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400">About</Link>
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400">Contact</Link>
+          </div>
+        )}
+      </nav>
+
+>>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
       {/* Contact Section */}
       <section className="flex flex-col items-center justify-center bg-gray-900 pt-24 pb-16">
         <div className="contact-header">

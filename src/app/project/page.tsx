@@ -67,6 +67,17 @@ export default function Projects() {
     <>
       <div className="project-bg" />
 
+
+      <nav className="fixed w-full flex justify-between items-center h-16 px-8 z-50 text-white backdrop-blur-md bg-black/30">
+        <h1 className="text-2xl font-bold">My Portfolio</h1>
+        <div className="hidden md:flex gap-6 text-sm">
+          <Link href="/" className="hover:text-amber-400">Home</Link>
+          <Link href="/project" className="hover:text-amber-400">Projects</Link>
+          <Link href="/about" className="hover:text-amber-400">About</Link>
+          <Link href="/contact" className="hover:text-amber-400">Contact</Link>
+        </div>
+      </nav>
+
       <section className="pt-24 pb-16 px-6 text-white min-h-screen relative z-10">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-wider">My Projects</h2>

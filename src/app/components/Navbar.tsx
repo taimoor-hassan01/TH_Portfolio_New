@@ -1,4 +1,6 @@
 "use client";
+
+// src/components/Navbar.tsx
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -13,6 +15,13 @@ export default function Navbar() {
           <Link href="/project" className="hover:text-yellow-500 text-white transition-colors">Projects</Link>
           <Link href="/about" className="hover:text-yellow-500 text-white transition-colors">About</Link>
           <Link href="/contact" className="hover:text-yellow-500 text-white transition-colors">Contact</Link>
+    <nav className="flex justify-between items-center fixed w-full h-16 bg-transparent px-8 z-50">
+        <h1 className="text-2xl text-white">My Portfolio</h1>
+        <div className="hidden md:flex space-x-6">
+          <Link href="/" className="hover:text-yellow-500 text-white">Home</Link>
+          <Link href="/project" className="hover:text-yellow-500 text-white">Projects</Link>
+          <Link href="/about" className="hover:text-yellow-500 text-white">About</Link>
+          <Link href="/contact" className="hover:text-yellow-500 text-white">Contact</Link>
         </div>
         <div className="md:hidden cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <div className="w-6 h-1 bg-white mb-1"></div>
@@ -25,6 +34,10 @@ export default function Navbar() {
             <Link href="/project" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-yellow-500">Projects</Link>
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-yellow-500">About</Link>
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-yellow-500">Contact</Link>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white">Home</Link>
+            <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className="text-white">Projects</Link>
+            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white">About</Link>
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white">Contact</Link>
           </div>
         )}
       </nav>

@@ -27,14 +27,24 @@
 
 
 
+<<<<<<< HEAD
 import Introduction from "./components/Introduction";
 import Skills from "./components/Skill";
 import Experience from "./components/Experience";
+=======
+// src/app/page.tsx
+import Introduction from "./components/introduction";
+import Skills from "./components/Skill";
+import Experience from "./components/Experience";
+import Navbar from "./components/Navbar";
+>>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
 import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
     <main>
+
+      <Navbar />
       <Introduction />
       <Skills />
       <Experience />
