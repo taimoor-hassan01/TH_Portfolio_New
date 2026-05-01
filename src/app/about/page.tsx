@@ -2,10 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-<<<<<<< HEAD
-=======
 import Link from "next/link";
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
 import Footer from "../components/Footer";
 import { Radar } from "react-chartjs-2";
 import {
@@ -21,10 +18,8 @@ import {
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 export default function About() {
-<<<<<<< HEAD
-=======
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
   const [typeIndex, setTypeIndex] = useState(0);
   const typingPhrases = [
     "Web Developer 👨‍💻",
@@ -34,19 +29,16 @@ export default function About() {
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     const interval = setInterval(() => {
       setTypeIndex((prev) => (prev + 1) % typingPhrases.length);
     }, 2000);
     return () => clearInterval(interval);
   }, [typingPhrases.length]);
-=======
   const interval = setInterval(() => {
     setTypeIndex((prev) => (prev + 1) % typingPhrases.length);
   }, 2000);
   return () => clearInterval(interval);
 }, [typingPhrases.length]);
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
 
   const chartData = {
     labels: ["Next.js", "Python", "TypeScript", "React", "CSS", "Git"],
@@ -80,8 +72,7 @@ export default function About() {
 
   return (
     <>
-<<<<<<< HEAD
-=======
+
       <nav className="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-50 text-white bg-transparent">
         <div className="text-2xl">My Portfolio</div>
         <div className="hidden md:flex gap-6">
@@ -107,7 +98,6 @@ export default function About() {
         )}
       </nav>
 
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
       <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 pt-28 px-6 text-white">
         {/* Profile with Glow */}
         <div className="relative w-36 h-36 mb-6 rounded-full shadow-xl border-4 border-blue-500 animate-pulse overflow-hidden">

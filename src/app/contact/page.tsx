@@ -50,17 +50,14 @@
 "use client";
 import React, { useState } from "react";
 import Footer from "../components/Footer";
-<<<<<<< HEAD
 import "./style.css";
 
 export default function Contact() {
-=======
 import Link from "next/link";
 import "./style.css";
 
 export default function Contact() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -151,8 +148,7 @@ export default function Contact() {
 
   return (
     <>
-<<<<<<< HEAD
-=======
+
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-transparent flex justify-between items-center px-8 py-4 z-50">
         <div className="text-white text-2xl">My Portfolio</div>
@@ -180,7 +176,6 @@ export default function Contact() {
         )}
       </nav>
 
->>>>>>> 461a5c02e4bc398804ae7ab23c2cb8264beb5fb9
       {/* Contact Section */}
       <section className="flex flex-col items-center justify-center bg-gray-900 pt-24 pb-16">
         <div className="contact-header">
